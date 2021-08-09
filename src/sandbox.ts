@@ -1,36 +1,36 @@
+let character: string = 'osi';
+let age: number;
+let isLoggedIn: boolean;
+
+// age = 'luigi';
+age = 30;
+
+// isLoggedIn = 25;
+isLoggedIn = true;
+
 // arrays
-let names = ['mani', 'mario', 'gent'];
+let manis: string[] = [];
 
-names.push('toad');
-// names.push(3);
-// names[1] = 3;
+manis.push('gen');
+manis.push('gu');
+console.log(manis);
 
-let numbers = [10, 20, 12, 15];
+// union types
+let mixed: (string|number|boolean)[] = [];
+mixed.push('hello');
+mixed.push(false);
+mixed.push(20);
+console.log(mixed);
 
-numbers.push(25);
-// numbers.push('shaun');
-// numbers[0] = 'shaun';
-
-let mixed = ['ken', 4, 'chun-li', 8, 9];
-
-mixed.push('red');
-mixed.push(10);
-mixed[0] = 3;
+let uid: string|number;
 
 // objects
-let man = {
-  name: 'mario',
-  belt: 'black',
-  age: 30
+let mani: object;
+mani = { name: 'yoshi', age: 30 };
+
+let osi: {
+  name: string,
+  age: number,
+  beltColour: string
 };
-
-man.age = 40;
-man.name = 'ryu';
-
-
-man = {
-  name: 'mani',
-  belt: 'orange',
-  age: 40,
-  // skills: ['running'],
-};
+osi = { name: 'ken', age: 20, beltColour: 'black' };
