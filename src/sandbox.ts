@@ -4,7 +4,7 @@ age = true;
 console.log(age);
 age = 'hello';
 console.log(age);
-age = { name: 'mani' };
+age = { name: 'wow' };
 console.log(age);
 
 let mixed: any[] = [];
@@ -14,10 +14,10 @@ mixed.push('mario');
 mixed.push(false);
 console.log(mixed);
 
-let object: { name: any, age: any };
+let mani: { name: any, age: any };
 
-object = { name: 'hey', age: 25 };
-console.log(object);
+mani = { name: 'wow', age: 25 };
+console.log(mani);
 
-object = { name: 25, age: 'wow' };
-console.log(object);
+mani = { name: 25, age: 'wow' };
+console.log(mani);
