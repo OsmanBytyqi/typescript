@@ -16,6 +16,7 @@ manis.push('gu');
 console.log(manis);
 
 // union types
+// in array we need to use (and type of array with |), not in the variable 
 let mixed: (string|number|boolean)[] = [];
 mixed.push('hello');
 mixed.push(false);
