@@ -1,36 +1,23 @@
-let character: string = 'osi';
-let age: number;
-let isLoggedIn: boolean;
+let age: any = 25;
 
-// age = 'luigi';
-age = 30;
+age = true;
+console.log(age);
+age = 'hello';
+console.log(age);
+age = { name: 'mani' };
+console.log(age);
 
-// isLoggedIn = 25;
-isLoggedIn = true;
+let mixed: any[] = [];
 
-// arrays
-let manis: string[] = [];
-
-manis.push('gen');
-manis.push('gu');
-console.log(manis);
-
-// union types
-let mixed: (string|number|boolean)[] = [];
-mixed.push('hello');
+mixed.push(5);
+mixed.push('mario');
 mixed.push(false);
-mixed.push(20);
 console.log(mixed);
 
-let uid: string|number;
+let object: { name: any, age: any };
 
-// objects
-let mani: object;
-mani = { name: 'yoshi', age: 30 };
+object = { name: 'hey', age: 25 };
+console.log(object);
 
-let osi: {
-  name: string,
-  age: number,
-  beltColour: string
-};
-osi = { name: 'ken', age: 20, beltColour: 'black' };
+object = { name: 25, age: 'wow' };
+console.log(object);
