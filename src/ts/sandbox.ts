@@ -1,25 +1,14 @@
-// let greet: Function = () => {
-//   console.log('hello, world');
-// }
 
-// greet = 'hello';
+type strorNum=string|number;
 
-// greet = () => {
-//   console.log('hello, again');
-// }
+type objectw={name:string,uid:strorNum}
 
-//void function not return value same logic like in C++
 
-const add = (a: number, b: number, c/*?*/: number | string = 10): void => {
-    console.log(a + b);
-    console.log(c);
-  }
-  
-  add(5, 10, 'ninja');
-  
-  const minus = (a: number, b: number): number => {
-    return a + b;
-  }
-  
-  let result = minus(10,7);
-  console.log(result);
+const firstfunc=(uid:strorNum,name:string)=>{
+  console.log(`uid is ${uid}`);
+
+}
+
+let user=(user:objectw)=>{
+  console.log(`name of user id ${user.name}`);
+}
