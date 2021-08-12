@@ -1,14 +1,22 @@
+// not return number or something else, just print in console 
+let hello: (a: string, b: string) => void;
 
-type strorNum=string|number;
-
-type objectw={name:string,uid:strorNum}
-
-
-const firstfunc=(uid:strorNum,name:string)=>{
-  console.log(`uid is ${uid}`);
-
+hello = (name: string, greeting: string) => {
+  console.log(`${name} says ${greeting}`);
 }
 
-let user=(user:objectw)=>{
-  console.log(`name of user id ${user.name}`);
+let calc: (a: number, b: number, c: string) => number;
+// return number like int function in cpp
+calc = (numOne: number, numTwo: number, action: string) => {
+  if (action === 'add') {
+    return numOne + numTwo;
+  } else {
+    return numOne - numTwo;
+  }
+}
+
+let logDetails: (obj: {name: string, age: number}) => void;
+
+logDetails = (mani: {name: string, age: number}) => {
+  console.log(`${mani.name} is ${mani.age} years old`);
 }
