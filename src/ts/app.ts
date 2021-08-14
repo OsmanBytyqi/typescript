@@ -1,10 +1,31 @@
-const anchor = document.querySelector('a')!;
-if(anchor) {
-  console.log(anchor.href);
-}
-console.log(anchor.href);
+// classes
+class Invoice {
+  client: string;
+  details: string;
+  amount: number;
 
-//const form = document.querySelector('form')!;
+  constructor(c: string, d: string, a: number){
+    this.client = c;
+    this.details = d;
+    this.amount = a;
+  }
+
+  format() {
+    return `${this.client} owes £${this.amount} for ${this.details}`;
+  }
+}
+
+const invOne = new Invoice('mani', 'work on the genti website', 250);
+const invTwo = new Invoice('genti', 'work on the mani website', 300);
+// declared an array which is empty and can accept just object 
+
+let invoices: Invoice[] = [];
+invoices.push(invOne)
+invoices.push(invTwo);
+
+console.log(invoices);
+
+
 const form = document.querySelector('.new-item-form') as HTMLFormElement;
 console.log(form.children);
 
