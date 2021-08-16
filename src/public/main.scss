@@ -1,45 +1,62 @@
+$font:Roboto;
+$maincolor:#0a58ff;
+$whitecolor:#eee;
+$defaultpadding:0px;
+
 
 body{
     margin: 0;
-    font-family: Roboto; 
+    font-family: $font; 
   }
+
   .wrapper{
     max-width: 960px;
     margin: 0 auto;
   }
   h1{
     margin: 40px auto;
-    color: #0a58ff;
+    color: $maincolor;
     text-align: center;
   }
+
   ul{
-    padding: 0;
+    padding: $defaultpadding;
     list-style-type: none;
   }
+
   li{
-    padding: 6px 10px;
-    border: 1px solid #eee;
+
+    padding:$defaultpadding+6 $defaultpadding+10;
+    border: 1px solid $whitecolor;
     margin: 10px auto;
-  }
-  li h4{
-    color: #0a6cff;
+
+
+
+      h4{
+
+    color: $maincolor;
     margin: 0;
     text-transform: capitalize;
+
+      }
+      p{
+        color: #333;
+        margin: 8px 0 0;
+      }
   }
-  li p{
-    color: #333;
-    margin: 8px 0 0;
-  }
+
   footer{
-    background: #eee;
-    padding: 60px;
+    background:$whitecolor;
+    padding:$defaultpadding+ 60;
     margin-top: 60px;
   }
+
   form{
     max-width: 960px;
     margin: 0 auto;
     text-align: center;
   }
+
   label{
     display: block;
     font-weight: bold;
@@ -47,27 +64,36 @@ body{
     color: #333;
     margin: 16px 0 6px;
   }
+
   input, select{
-    padding: 6px;
+    padding: $defaultpadding+6;
     border: 1px solid #e1e1e1;
     border-radius: 4px;
   }
+
   .field{
     display: inline-block;
     margin: 0 10px;
   }
+
   button{
     color: white;
     border: 0;
-    background: #0a58ff;
-    padding: 6px;
+    background: $maincolor;
+    padding: $defaultpadding+6;
     min-width: 80px;
     border-radius: 4px;
   }
-  footer a{
-    text-align: center;
-    display: block;
-    color: #999;
-    margin-top: 40px;
-    font-size: 0.7em;
-  }
+
+
+  footer{
+      a{
+        
+            text-align: center;
+            display: block;
+            color: #999;
+            margin-top: 40px;
+            font-size: 0.7em;
+          }
+      }
+  
