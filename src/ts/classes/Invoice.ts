@@ -1,9 +1,10 @@
 // classes
-   export class Invoice {
-  // readonly client: string;
-  // private details: string;
-  // public amount: number;
 
+import { formatter } from "../interfaces/formatter.js";
+
+ 
+   export class Invoice implements formatter{
+  
   constructor(
     readonly client: string, 
     private details: string, 

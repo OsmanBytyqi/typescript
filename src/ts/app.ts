@@ -1,5 +1,8 @@
 
  import { Invoice } from "./classes/Invoice.js";
+ import { Payments } from "./classes/payment.js";
+ import { formatter } from './interfaces/formatter.js';
+
 
 
 
@@ -44,11 +47,12 @@
  
  form.addEventListener('submit', (e: Event) => {
    e.preventDefault();
- 
-   console.log(
-     type.value, 
-     tofrom.value, 
-     details.value, 
-     amount.valueAsNumber
-   );
+   let doc: formatter;
+   if (type.value === 'invoice') {
+     doc = new Invoice(tofrom.value, details.value, amount.valueAsNumber);
+   } else {
+     doc = new Payments(tofrom.value, details.value, amount.valueAsNumber);
+   }
+   console.log(doc);
+   
  });
