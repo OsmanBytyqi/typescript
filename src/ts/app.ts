@@ -2,6 +2,9 @@
  import { Invoice } from "./classes/Invoice.js";
  import { Payments } from "./classes/payment.js";
  import { formatter } from './interfaces/formatter.js';
+ import { ListTemplate } from './classes/templates.js';
+
+//  import { formatter } from './interfaces/formatter.js';
 
 
 
@@ -44,6 +47,10 @@
  const tofrom = document.querySelector('#tofrom') as HTMLInputElement;
  const details = document.querySelector('#details') as HTMLInputElement;
  const amount = document.querySelector('#amount') as HTMLInputElement;
+
+ const ul = document.querySelector('ul')!;
+const list = new ListTemplate(ul);
+
  
  form.addEventListener('submit', (e: Event) => {
    e.preventDefault();
@@ -53,6 +60,5 @@
    } else {
      doc = new Payments(tofrom.value, details.value, amount.valueAsNumber);
    }
-   console.log(doc);
-   
+   list.render(doc, type.value, 'end');
  });
