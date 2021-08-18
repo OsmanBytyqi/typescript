@@ -74,26 +74,27 @@ const list = new ListTemplate(ul);
 }
 
 let docOne = addUID({name: 'yoshi', age: 40});
-//let docTwo = addUID('shaun');
 
 console.log(docOne.name);
+
+enum ResourceType {AUTHOR,BOOK,TITLE}
 
 // with interfaces
 interface Resource<T> {
   uid: number;
-  resourceName: string;
+  resourceName: ResourceType;
   data: T;
 }
 
 const docThree: Resource<object> = {
   uid: 1, 
-  resourceName: 'person', 
+  resourceName: ResourceType.AUTHOR, 
   data: { name: 'man' }
 };
 
 const docFour: Resource<string[]> = {
   uid: 1, 
-  resourceName: 'shoppingList', 
+  resourceName: ResourceType.TITLE, 
   data: ['bread', 'milk']
 };
 

@@ -45,16 +45,21 @@ const addUID = (obj) => {
     return Object.assign(Object.assign({}, obj), { uid });
 };
 let docOne = addUID({ name: 'yoshi', age: 40 });
-//let docTwo = addUID('shaun');
 console.log(docOne.name);
+var ResourceType;
+(function (ResourceType) {
+    ResourceType[ResourceType["AUTHOR"] = 0] = "AUTHOR";
+    ResourceType[ResourceType["BOOK"] = 1] = "BOOK";
+    ResourceType[ResourceType["TITLE"] = 2] = "TITLE";
+})(ResourceType || (ResourceType = {}));
 const docThree = {
     uid: 1,
-    resourceName: 'person',
-    data: { name: 'shaun' }
+    resourceName: ResourceType.AUTHOR,
+    data: { name: 'man' }
 };
 const docFour = {
     uid: 1,
-    resourceName: 'shoppingList',
+    resourceName: ResourceType.TITLE,
     data: ['bread', 'milk']
 };
 console.log(docThree, docFour);
