@@ -31,11 +31,13 @@ const list = new ListTemplate(ul);
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     let doc;
+    let values;
+    values = [tofrom.value, details.value, amount.valueAsNumber];
     if (type.value === 'invoice') {
-        doc = new Invoice(tofrom.value, details.value, amount.valueAsNumber);
+        doc = new Invoice(...values);
     }
     else {
-        doc = new Payments(tofrom.value, details.value, amount.valueAsNumber);
+        doc = new Payments(...values);
     }
     list.render(doc, type.value, 'end');
 });
@@ -63,3 +65,14 @@ const docFour = {
     data: ['bread', 'milk']
 };
 console.log(docThree, docFour);
+// TUPLES
+let arr = ['nice', 25, true];
+arr[0] = false;
+arr[1] = 'osi';
+arr = [30, false, 'doni'];
+let tup = ['ok', 25, true];
+// tup[0] = false;
+tup[0] = 'ken';
+let student;
+//student = [23564, 'chun-li'];
+student = ['mani', 23564];
