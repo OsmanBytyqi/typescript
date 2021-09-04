@@ -1,4 +1,4 @@
-## TypeScript course
+## TypeScript
 ---
 ### To see the solution of the particular quiz, please navigate through the releases dropdown menu.
 ---
