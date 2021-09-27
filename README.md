@@ -8,4 +8,4 @@
 ![Video Guide](./guide.gif)
 
 
-need to fix a couple of typos in commit message 
+> Need to fix a couple of typos in commit message 
