@@ -4,8 +4,6 @@
 ---
 ### Feel Free to give a star to this repository⭐
 
----
-![Video Guide](./guide.gif)
 
 
 > Need to fix a couple of typos in commit message 
